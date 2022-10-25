@@ -131,7 +131,7 @@
 
 \chapter{Capítulo 1 - Deformação e Cinemática. Balanço de massa}\index{Sectioning}
 
-O objetivo deste capítulo é descrever a deformação e a cinemática de um meio poroso formado por um esqueleto deformável e um fluído saturando o espaço poroso. A ideia subjacente consiste em abordar o meio poroso como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. A descrição da deformação e da cinemática de cada contínuo em separado não difere forma de alguma daquela de um meio contínuo monofásico. Mesmo assim, a deformação do esqueleto \footnote{N.T: como será visto adiante, o \textbf{esqueleto} é o espaço ocupado pela matriz e os vazios conectados. Sendo a \textbf{matriz} o espaço ocupado pelo sólido com sua porosidade oclusa.} é a única que eventualmente pode ser realmente observada e portanto é a discutida na sequência.
+O objetivo deste capítulo é descrever a deformação e a cinemática de um meio poroso formado por um esqueleto deformável e um fluído saturando o espaço poroso. A ideia subjacente consiste em abordar o meio poroso como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. A descrição da deformação e da cinemática de cada contínuo em separado não difere forma de alguma daquela de um meio contínuo monofásico. Mesmo assim, a deformação do esqueleto \footnote{N.T: como será visto, o \textbf{esqueleto} é o espaço ocupado pela matriz e os vazios conectados. Sendo a \textbf{matriz} o espaço ocupado pelo sólido com sua porosidade oclusa.} é a única que eventualmente pode ser realmente observada e portanto é a discutida na sequência.
 
 As leis da física que governam a evolução de um contínuo poroso envolve a taxa temporal das quantidades físicas ligadas ao esqueleto ou ao fluído, qualquer que sejam seus movimentos distintos posterior. Por conseguinte a derivada particular é portanto introduzida, permitindo a nós seguir separadamente o movimento do esqueleto e do fluído. Uma primeira ilustração do seu uso é dada no final desse capítulo expressando o balanço de massa para os dois contínuos sobrepostos.
 
@@ -142,11 +142,16 @@ As leis da física que governam a evolução de um contínuo poroso envolve a ta
 
 Um \textbf{meio poroso saturado} é composto de uma matriz e um espaço poroso, sendo este último preenchido por um fluído. O \textbf{espaço poroso conectado} é o espaço através do qual o fluido realmente flui e cujos dois pontos podem ser unidos por um caminho inteiramente dentro dele, de modo que a fase fluída permanece contínua lá. A \textbf{matriz} é composta por uma parte sólida e uma possível porosidade oclusa saturada ou não, mas através da qual não ocorre infiltração. A \textbf{porosidade conectada} é a razão entre o volume do espaço poroso conectado e o volume total. No que segue, o termo "porosidade", usado sem maiores especificações, refere-se a toda a porosidade conectada.
 
-FIGURA 1.1
-
 \subsection{Parciculas do Esqueleto e do Fluído. Hipóteses da Continuidade}\index{Sectioning!Subsections}
 
-Um meio poroso pode ser tratado como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. Portanto, como ilustrado na FIGURA 1, qualquer volume infinitesimal pode ser tratado como a sobreposição de duas partículas materiais. A primeira é a \textbf{partícula de esqueleto} formada da matriz e do espaço poroso conectado esvaziado de fluído. A segunda é a \textbf{partícula de fluído} formada a partir do fluído que satura o espaço poroso conectado e do restante do espaço sem a matriz.
+Um meio poroso pode ser tratado como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. Portanto, como ilustrado na \autoref{fig:fig1-1.pdf}, qualquer volume infinitesimal pode ser tratado como a sobreposição de duas partículas materiais. A primeira é a \textbf{partícula de esqueleto} formada da matriz e do espaço poroso conectado esvaziado de fluído. A segunda é a \textbf{partícula de fluído} formada a partir do fluído que satura o espaço poroso conectado e do restante do espaço sem a matriz.
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[scale = 1.1]{fig1-1.pdf} % Include the figure image
+	\caption{O meio poroso como a superposição de dois meios contínuos: a partícula do esqueleto e uma partícula do fluído coincidentes no mesmo volume geométrico infinitesimal}
+	\label{fig:fig1-1.pdf} % Unique label used for referencing the figure in-text
+\end{figure}
 
 Uma descrição contínua de um meio, que é heterogêneo na escala microscópica, requer a escolha de uma escala macroscópica no qual a constituição interna da matéria é ignorada na análise dos fenômenos físicos macroscópicos. Por exemplo, a porosidade está associada a um volume elementar com material suficiente para ser representativo do processo de infiltração. De forma mais geral, a hipótese da continuidade assume a existência de um \textbf{volume elementar representativo} que é relevante na escala macroscópica para todos os fenômenos físicos envolvidos na aplicação pretendida. Supõe-se que a física varia continuamente de um para outro desses volumes infinitesimais justapostos. Volumes que juntos constituem o meio poroso. Além disso, a deformação contínua do esqueleto assume que duas partículas do esqueleto, justapostas em um dado momento, foram sempre assim e permanecerão assim. 
 
@@ -160,7 +165,9 @@ Quando sujeito a forças externas e a variações de pressão do fluído saturad
 
 
 \newcommand{\Fll}{\textbf{F}}
+\newcommand{\Ml}{\textbf{M}}
 \newcommand{\Nl}{\textbf{N}}
+\newcommand{\Cl}{\textbf{C}}
 \newcommand{\nl}{\textbf{n}}
 \newcommand{\dl}{\textbf{d}}
 \newcommand{\Rll}{\textbf{R}}
@@ -169,6 +176,7 @@ Quando sujeito a forças externas e a variações de pressão do fluído saturad
 \newcommand{\Ul}{\textbf{U}}
 \newcommand{\Xl}{\textbf{X}}
 \newcommand{\Yl}{\textbf{Y}}
+\newcommand{\wl}{\textbf{w}}
 \newcommand{\Xil}{\bm{\xi}}
 \newcommand{\strainll}{\bm{\varepsilon}}
 \newcommand{\Omegall}{\bm{\Omega}}
@@ -182,78 +190,91 @@ Quando sujeito a forças externas e a variações de pressão do fluído saturad
 \newcommand{\Vl}{\textbf{V}}
 \newcommand{\Deltall}{\bm{\Delta}}
 
-No tempo $t=0$ considere uma configuração inicial para o esqueleto. Nesta configuração a partícula de esqueleto está localizada pelo vetor posição $\Xl$ de componentes $X_i$, em um sistema de referências Cartesiano de base ortonormal $(\el_1, \el_2, \el_3)$. No tempo $t$ o esqueleto foi deformado e permanece na sua configuração atual. Nesta configuração a partícula cujo vetor posição era $\Xl$ é agora localizada pelo vetor posição atual $\xl$ de componentes $x_i(X_j,t)$. Nós escrevemos:
+No tempo $t=0$ considere uma configuração inicial para o esqueleto. Nesta configuração a partícula de esqueleto está localizada pelo vetor posição $\Xl$ de componentes $X_i$, em um sistema de referências Cartesiano de base ortonormal $(\el_1, \el_2, \el_3)$. No tempo $t$ o esqueleto foi deformado e permanece na sua configuração atual. Nesta configuração a partícula cujo vetor posição era $\Xl$ é agora localizada pelo vetor posição atual $\xl$ de componentes $x_i(X_j,t)$\footnote{N.T.: De fato, após a deformação, a posição de uma partícula localizada inicialmente em $\Xl$ é dada por uma transformação geométrica que, de modo geral, depende tanto da posição inicial $\Xl$ quanto do tempo $t$. De modo que $\xl = \Fll \cdot \Xl + \Cl$, em que $\Cl(t)$ representa translação e $\Fll(\Xl,t)$ é o gradiente da deformação.}. Nós escrevemos:
 
 \begin{equation}
 		\label{eq:Xl_e_xl}	
-		\Xl = X_i \el_i; ~~ \xl = x_i(X_j,t)\el_i
-\end{equation}
+		\Xl = X_i \el_i; ~~ \xl = x_i(X_j,t)\el_i 
+\end{equation} 
+com um somatório no índice repetido $i$ \footnote{Conhecido também como convenção de somatórios de Einstein: $\Xl = X_1 \el_1 + X_2 \el_2 + X_3 \el_3$.}. No restante do trabalho essa convenção é adotada, desde que nenhuma outra indicação seja dada e a notação indicial se refere a um sistema de coordenadas Cartesiano.
 
-com um somatório no índice repetido $i$. No restante do trabalho essa convenção é adotada, desde que nenhuma outra indicação seja dada e a notação indicial se refere a um sistema de coordenadas Cartesiano.
+\paragraph{Gradiente de deformação e transporte de um vetor}\index{Sectioning!Paragraphs} Na configuração inicial considere um vetor material infinitesimal $d\Xl$ da partícula de esqueleto localizada a $\Xl$ orientado para a partícula justaposta localizada a $\Xl+d\Xl$. Após a deformação, $d\Xl$ se torna $d\xl$ e acompanha as mesmas partículas de esqueleto em suas novas posições, $\xl$ e $\xl+d\xl$ (ver \autoref{fig:fig1-2.pdf}). 
 
-\textbf{Gradiente de deformação e transporte de um vetor}. Na configuração inicial considere um vetor material infinitesimal $d\Xl$ da partícula de esqueleto localizada a $\Xl$ orientado para a partícula justaposta localizada a $\Xl+d\Xl$. Após a deformação, $d\Xl$ se torna $d\xl$ e acompanha as mesmas partículas de esqueleto em suas novas posições, $\xl$ e $\xl+d\xl$ (ver FIGURA 2). O vetor $d\xl$ pode ser obtido de $d\Xl$ pela diferenciação de (\ref{eq:Xl_e_xl}):
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[scale = 1.1]{fig1-2.pdf} % Include the figure image
+	\caption{Gradiente de deformação $\Fll$ e o transporte de um vetor material $d\Xl$}
+	\label{fig:fig1-2.pdf} % Unique label used for referencing the figure in-text
+\end{figure}
+
+O vetor $d\xl$ pode ser obtido de $d\Xl$ pela diferenciação de (\ref{eq:Xl_e_xl}):
 
 \begin{equation}
 	\label{eq:dx_indicial}	
 	d\xl = \dfrac{\partial x_i}{\partial X_j}dX_j\el_i
 \end{equation}
-
 ou, equivalentemente:
-
 \begin{equation}
 	\label{eq:dx}	
 	d\xl = \Fll \cdot d\Xl
 \end{equation}
-
 onde:
-
 \begin{equation}
 	\label{eq:Fll}	
 	\Fll = \nabla_X \xl ; ~~ F_{ij} = \dfrac{\partial x_i}{\partial X_j}
 \end{equation}
 
-Em (\ref{eq:Fll}) $\nabla_X$ representa o operador nabla relativo a configuração inicial. $\Fll$ é chamado de \textbf{gradiente de deformações}. Ele transporta qualquer vetor material $d\Xl$ em seu deformado $d\xl$. Sua inversa $\Fll^{-1}$ e sua transposta ${}^t \Fll$ são respectivamente definidos por:
+Em (\ref{eq:Fll}) $\nabla_X$ representa o operador gradiente (nabla) relativo a configuração inicial. $\Fll$ é chamado de \textbf{gradiente de deformações}. Ele transporta qualquer vetor material $d\Xl$ em seu deformado $d\xl$. Sua inversa $\Fll^{-1}$ e sua transposta ${}^t \Fll$ são respectivamente definidos por:
 
 \begin{equation}
 	\label{eq:inversaFll_e_transpostaFll}	
 	d\Xl = \Fll^{-1} \cdot d\xl; ~~ d\xl = d\Xl \cdot {}^t\Fll
 \end{equation}
-
-e satisfazem:
-
+\footnote{N.T.: na segunda expressão de (\ref{eq:inversaFll_e_transpostaFll}) se usa a propriedade de permutação na contração simples entre um tensor de segunda ordem e de primeira ordem: $\textbf{T} \cdot \textbf{v} = \textbf{v} \cdot {}^t\textbf{T}$}e satisfazem:
 \begin{equation}
 	\label{eq:inversaFll_e_transpostaFll2}	
 	({}^t\Fll)_{ij} = F_{ji}; ~~(\Fll^{-1})_{ij} = \dfrac{\partial X_i}{\partial x_j}
 \end{equation}
 
-\textbf{Gradiente de deformações e deslocamento}. Seja $\Xil(\Xl,t)$ o vetor deslocamento da partícula da qual a posição inicial e atual são $\Xl$ e $\xl$. Nós escrevemos:
+\paragraph{Gradiente de deformações e deslocamento}\index{Sectioning!Paragraphs} Seja $\Xil(\Xl,t)$ o vetor deslocamento da partícula da qual a posição inicial e atual são $\Xl$ e $\xl$, respectivamente. Escrevemos:
 
 \begin{equation}
 	\label{eq:Xl+Xli}	
 	\xl = \Xl + \Xil
 \end{equation}
 
-Das definições (\ref{eq:Fll}) e (\ref{eq:Xl+Xli}) o gradiente de deformação pode ser expresso como uma função do vetor deslocamentos $\Xil$ conforme:
+Das definições (\ref{eq:Fll}) e (\ref{eq:Xl+Xli}) o gradiente de deformação pode ser expresso como uma função do vetor deslocamentos $\Xil$ conforme \footnote{N.T.: Nessa dedução aplica-se o gradiente $\nabla_X$ em ambos os lados da equação (\ref{eq:Xl+Xli}) lembrando que o $\nabla_X \cdot \Xl = \onell$}:
 
 \begin{equation}
 	\label{eq:Fll=1+nablaXil}	
 	\Fll = \onell + \nabla_X \Xil; ~~ F_{ij} = \delta_{ij}+\dfrac{\xi_i}{X_j}
 \end{equation}	
-
 onde $\delta_{ij}$ é o delta de Kronecker, que é $\delta_{ij}=1$ se $i=j$ e $\delta_{ij}=0$ se $i \neq j$.
 
-\textbf{Transporte de Volume}. O volume infinitesimal atual $d\Omega_t=dx_1 dx_2 dx_3$ é igual ao produto composto:
+\paragraph{Trasnporte de volume}\index{Sectioning!Paragraphs} O volume infinitesimal atual $d\Omega_t=dx_1 dx_2 dx_3$ é igual ao produto composto\footnote{N.T.: Pode-se aplicar diretamente a função determinante:
+	\begin{displaymath}	
+	d\Omega_t = (dx_1\el_1, dx_2\el_2, dx_3\el3) = \begin{vmatrix}
+	dx_1 & 0 & 0 \\
+	0	& dx_2  & 0 \\
+	0	& 0 & dx_3
+	\end{vmatrix} = dx_1 dx_2 dx_3	
+	\end{displaymath}
+}:
 
 \begin{equation}
 	\label{eq:domegat}	
 	d\Omega_t = (d\xl_1, d\xl_2, d\xl_3) = d\xl_1 \cdot (d\xl_2 \times d\xl_3)
 \end{equation}	
+onde $d\xl_i=dx_i\el_i$ (com nenhum somatório). A lineariedade do produto composto com respeito aos vetores combinados permite nós escrevermos \footnote{N.T.: Nessa dedução deve-se usar a propriedade de quando se multiplica linhas ou colunas de um determinante por um escalar, o determinante fica multiplicado por esse escalar. Além disso, a contração $\Fll \cdot \el_i$ extrai o vetor correspondente a linha $i$ de $\Fll$.
 
-onde $d\xl_i=dx_i\el_i$ (com nenhum somatório). A lineariedade do produto composto com respeito aos vetores combinados permite nós escrevermos:
+	\begin{displaymath}	
+	d\Omega_t = (dX_1 \Fll \cdot \el_1, dX_2 \Fll \cdot \el_2, dX_3 \Fll \cdot \el3) = dX_1 dX_2 dX_3(\Fll \cdot \el_1, \Fll \cdot \el_2, \Fll \cdot \el3) = dX_1 dX_2 dX_3 \det(\Fll)
+\end{displaymath}
 
+}:
 \begin{equation}
 	\label{eq:domegat2}	
-	d\Omega_t = (\Fll \cdot d\xl_1, \Fll \cdot d\xl_2, \Fll \cdot d\xl_3) = \det \Fll(d\Xl_1, d\Xl_2, d\Xl_3)
+	d\Omega_t = (\Fll \cdot d\xl_1, \Fll \cdot d\xl_2, \Fll \cdot d\xl_3) = \det (\Fll)(d\Xl_1, d\Xl_2, d\Xl_3)
 \end{equation}
 
 Como consequência qualquer volume material inicial $d\Omega_0$ se transforma no volume material $d\Omega_t$ através da relação:
@@ -262,10 +283,19 @@ Como consequência qualquer volume material inicial $d\Omega_0$ se transforma no
 	\label{eq:domegat2}	
 	d\Omega_t = Jd\Omega_0
 \end{equation}
-
 onde $J=det{\Fll}$ é o Jacobiano da deformação.
 
-\textbf{Transporte de superfície}. Considere uma superficie material $dA$, orientada pelo vetor unitário normal $\Nl$. Ao longo da deformação $dA$ se transforma na superfície material $da$, orientada pelo vetor normal $\nl$. Como os vetores $\Nl$ e $\nl$ não são vetores materiais, eles não sofrem deformação. Seja $\Ul$ qualquer vetor material na configuração inicial. O cilindro material de volume inicial $\Nl \cdot \Ul dA$ se transforma no cilindro material de volume $\nl \cdot \Fll \cdot \Ul da$ (VER FIGURA 1.3). Conforme (\ref{eq:domegat2}) pode-se escrever:
+\paragraph{Trasnporte de superfície}\index{Sectioning!Paragraphs} Considere uma superficie material $dA$, orientada pelo vetor unitário normal $\Nl$. Ao longo da deformação $dA$ se transforma na superfície material $da$, orientada pelo vetor normal $\nl$. Como os vetores $\Nl$ e $\nl$ não são vetores materiais, eles não sofrem deformação. Seja $\Ul$ qualquer vetor material na configuração inicial. O cilindro material de volume inicial $\Nl \cdot \Ul dA$ se transforma no cilindro material de volume $\nl \cdot \Fll \cdot \Ul da$ (ver \autoref{fig:fig1-3.pdf}). 
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[scale = 1.1]{fig1-3.pdf} % Include the figure image
+	\caption{Gradiente de deformação $\Fll$ e o transporte de um vetor material $d\Xl$}
+	\label{fig:fig1-3.pdf} % Unique label used for referencing the figure in-text
+\end{figure}
+
+
+Conforme (\ref{eq:domegat2}) pode-se escrever:
 
 \begin{equation}
 	\label{eq:nFUda=JNUda}	
@@ -305,7 +335,7 @@ Integrando (\ref{eq:vnda=VNdA}) no volume $\Omega_0$ e $\Omega_t$ na deformaçã
 	\begin{displaymath}	
 	\int_{\partial \Omega_t}^{}\vl \cdot \nl da = \int_{\partial \Omega_0}^{}\Vl \cdot \Nl dA
 	\end{displaymath}
-	Usando o Teorema da Divergência a expressão anterior:
+	Usando o Teorema da Divergência a expressão anterior fica:
 	\begin{displaymath}	
 	\int_{\Omega_t}^{}\nabla_x \cdot \vl d\Omega_t = \int_{ \Omega_0}^{} \nabla_X \cdot \Vl d\Omega_0 \iff \nabla_x \cdot \vl d\Omega_t = \nabla_X \cdot \Vl d\Omega_0 \therefore J \nabla_x \cdot \vl = \nabla_X \cdot \Vl
 	\end{displaymath}
@@ -373,7 +403,7 @@ O valor de 2 é um valor arbitrário.
 	d\xl = \Fll \cdot d\Xl ;  ~~ d\yl = \Fll \cdot d\Yl: ~~ d\xl \cdot d\yl - d\Xl \cdot d\Yl = 2d\Xl \cdot \Deltall \cdot d\Yl
 \end{equation}
 
-Com a ajuda de (\ref{eq:inversaFll_e_transpostaFll}) pode-se escrever como uma função do gradiente de deformações conforme \footnote{N.T.: quando se tem ${}^t\Fll \cdot \Fll = \onell$ tem-se um movimento de corpo rígido (isometria). Pode transladar ou rotacionar, mas não se deforma. Uma rotação pura ainda adiciona a seguinte condição: $\det {\Fll}=1$}.:
+Com a ajuda de (\ref{eq:inversaFll_e_transpostaFll}) pode-se escrever como uma função do gradiente de deformações conforme \footnote{N.T.: quando se tem ${}^t\Fll \cdot \Fll = \onell$ tem-se um movimento de corpo rígido sem deformação (isometria). Pode transladar ou rotacionar, mas não se deforma. Uma rotação pura ainda adiciona a seguinte condição: $\det {\Fll}=1$. Nessa expressão pode-se ver que a deformação é o afastamento da isometria.}.
 
 \begin{equation}
 	\label{eq:Deltall}	
@@ -459,13 +489,13 @@ Sobre a condição de (\ref{eq:HTI}) o tensor de deformações de Green-Lagrange
 
 Uma vez que $\Deltall$ tem a mesma ordem de magnitude que $\nabla_X\Xil$, a transformação infinitesimal implica deformação infinitesimal, ou seja $\|\Deltall\| \ll 1$. Porém, a deformação pode ser infinitesimal enquanto que a transformação não é. Por exemplo, no movimento de corpo rígido $\Deltall$ é nulo enquanto que $\nabla_X \Xil$ pode ter qualquer odem de magnitude.
 
-Sobre a aproximação das transformações infinitesimais, (\ref{eq:Fll=1+nablaXil}) fornece \footnote{N.T.: Ao fazer o determinante os termos multiplicativos de mais alta ordem tendem a zero:
+Com a aproximação das transformações infinitesimais, (\ref{eq:Fll=1+nablaXil}) fornece \footnote{N.T.: Na hipótese das transformações infinitesimais, ao fazer o determinante os termos multiplicativos de mais alta ordem tendem a zero:
 \begin{displaymath}		
-\det(\Fll) = \det (\onell + \nabla_X \Xil) = \begin{vmatrix}
-	1+\dfrac{\partial \varepsilon_1}{\partial x_1} & \dfrac{\partial \varepsilon_1}{\partial x_2} & \dfrac{\partial \varepsilon_1}{\partial x_3} \\
-	\dfrac{\partial \varepsilon_2}{\partial x_1} & 1 + \dfrac{\partial \varepsilon_2}{\partial x_2} & \dfrac{\partial \varepsilon_2}{\partial x_3} \\
-	\dfrac{\partial \varepsilon_3}{\partial x_3} & \dfrac{\partial \varepsilon_2}{\partial x_3} & 1+ \dfrac{\partial \varepsilon_3}{\partial x_3}
-\end{vmatrix} = 1 + \dfrac{\partial \varepsilon_1}{\partial x_1} + \dfrac{\partial \varepsilon_2}{\partial x_2} + \dfrac{\partial \varepsilon_3}{\partial x_3} = 1 + \text{tr}(\varepsilon) = 1 + \nabla \cdot \Xil
+\det(\Fll) = \det (\onell + \nabla \Xil) = \begin{vmatrix}
+	1+\dfrac{\partial \xi_1}{\partial x_1} & \dfrac{\partial \xi_1}{\partial x_2} & \dfrac{\partial \xi_1}{\partial x_3} \\
+	\dfrac{\partial \xi_2}{\partial x_1} & 1 + \dfrac{\partial \xi_2}{\partial x_2} & \dfrac{\partial \xi_2}{\partial x_3} \\
+	\dfrac{\partial \xi_3}{\partial x_3} & \dfrac{\partial \xi_2}{\partial x_3} & 1+ \dfrac{\partial \xi_3}{\partial x_3}
+\end{vmatrix} = 1 + \dfrac{\partial \xi_1}{\partial x_1} + \dfrac{\partial \xi_2}{\partial x_2} + \dfrac{\partial \xi_3}{\partial x_3} = 1 + \text{tr}(\strainll) = 1 + \nabla \cdot \Xil
 \end{displaymath}	}:
 
 \begin{equation}
@@ -479,9 +509,7 @@ De agora em diante, seja $\epsilon$ a dilatação volumétrica linearizada do es
 	\label{eq:epsilon}	
 	\epsilon = \varepsilon_{ii} = \nabla \cdot \Xil
 \end{equation}
-
 de modo que (\ref{eq:domegat2}) toma a forma de:
-
 \begin{equation}
 	\label{eq:domegatlinearizado}	
 	d\Omega_t \simeq (1+\epsilon)d\Omega_0
@@ -519,7 +547,7 @@ Na ausência de porosidade oclusa, os grãos do sólido que formam a matriz sofr
 
 Como geralmente é feito na mecânica dos solos, pode ser mais conveniente usar a razão de vazios em vez da dilatação volumétrica. Combinando (\ref{eq:phidOmega0=ndOmegat}), (\ref{eq:e}) e (\ref{eq:epsilon}) obtemos \footnote{N.T.: tem-se que:
 	\begin{displaymath}	
-		\phi = \dfrac{e}{1+e_0}; ~~~ \phi_0 = \dfrac{e_0}{1+e_0}
+		\phi = \dfrac{e}{1+e_0} ~~~ \text{e} ~~~ \phi_0 = \dfrac{e_0}{1+e_0} ~~~ \text{e portanto}  ~~~ \epsilon = \phi - \phi_0 = \dfrac{e-e_0}{1+e_0}
 	\end{displaymath}
 }:
 
@@ -533,13 +561,12 @@ Sobre a aproximação das transformações infinitesimais, o termo da diagonal $
 
 \section{Cinemática}\index{Sectioning!Sections}
 
-A descrição da deformação do esqueleto por meio do gradiente de deformação $\Fll$ é por natureza uma descrição Lagrangiana. Os campos são funções do tempo $t$ e do vetor posição $\Xl$ localizando a partícula do esqueleto na configuração inicial. A posição não varia com o tempo e a cinemática do esqueleto resulta de uma simples derivação.
+A descrição da deformação do esqueleto por meio do gradiente de deformação $\Fll$ é por natureza uma descrição Lagrangiana. Os campos são funções do tempo $t$ e do vetor posição $\Xl$ localizando a partícula do esqueleto na configuração inicial. A posição $\Xl$ não varia com o tempo e a cinemática do esqueleto resulta de uma simples derivação.
 
 Em contraste a abordagem Lagrangeana, a abordagem Euleriana envolve apenas a configuração atual, sem referência a qualquer configuração inicial. A abordagem é feita usando o campo de velocidades $\Vl^\pi(\xl,t)$ da particula coincidindo no tempo $t$ com a geometria do ponto localizado em $\xl$. A partícula pode ser uma partícula de esqueleto, $\pi = s$, ou uma partícula de fluído, $\pi = f$\footnote{Teria sido mais rigoroso fazer uma distinção entre o índice referente ao assunto na escala macroscópica (por exemplo, $sk$ para a partícula do esqueleto e $fl$ para a partícula de fluído) e o índice referindo a matéria na mesoescala (por exemplo, $s$ para a matriz sólida, como em (\ref{eq:epsilongraocompressivel}), e $f$ para o fluído). Contudo, por uma questão de simplicidade da notação, optamos por não fazer essa distinção}. No tempo $t$, a mesma abordagem Euleriana se aplica a ambas as partículas, pois o esqueleto contínuo e o fluído contínuo se fundem na mesma configuração atual.
 
 \subsection{Derivada Material}\index{Sectioning!Subsections}
 \textbf{Definição}
-
 A derivada material $d^\pi \mathcal{G}/dt$ com relação a partícula $\pi$ ($=s$ ou $f$) de algum campo $\mathcal{G}$ é a derivada temporal de $G$ que um observador ligado a partícula derivaria. Este observador registra a variação $d^\pi\mathcal{G}$ da quantidade $\mathcal{G}$ entre os tempos $t$ e $t+dt$. Por exemplo, sendo a origem de coordenadas fixa, o campo de velocidades $\Vl^\pi(\xl,t)$ da partícula $\pi$ localizada a $\xl$ se lê:
 
 \begin{equation}
@@ -578,7 +605,7 @@ A linearidade do produto composto $(\vl_1, \vl_2, \vl_3)$ com respeito aos vetor
 	\dfrac{d^\pi}{dt}(d\Omega_t) = \left(\dfrac{d^\pi}{dt}(d\xl_1),d\xl_2,d\xl_3\right) + \left(d\xl_1,\dfrac{d^\pi}{dt}(d\xl_2),d\xl_3\right)+\left(d\xl_1,d\xl_2,\dfrac{d^\pi}{dt}(d\xl_3)\right)
 \end{equation}
 
-Usando (\ref{eq:dpix}) obtém-se:
+Usando (\ref{eq:dpix3}) obtém-se:
 
 \begin{equation}
 	\label{eq:derivadavolumematerial2}	
@@ -591,9 +618,7 @@ O produto $(\vl_1,\vl_2,\vl_3)$ é zero assim que dois vetores entre os vetores 
 	\label{eq:derivadavolumematerial3}	
 	\dfrac{d^\pi}{dt}(d\Omega_t) = \left(\dfrac{\partial V_1^\pi}{\partial x_1},\dfrac{\partial V_2^\pi}{\partial x_2},\dfrac{\partial V_3^\pi}{\partial x_3}\right)(d\xl_1,d\xl_2,d\xl_3)
 \end{equation}
-
 ou equivalentemente:
-
 \begin{equation}
 	\label{eq:derivadavolumematerial3}	
 	\dfrac{d^\pi}{dt}(d\Omega_t) = (\nabla_x \cdot \Vl^\pi)d\Omega_t; ~~~ \pi = s ~~\text{ou} ~~ f
@@ -628,53 +653,50 @@ Com o uso de (\ref{eq:derivadavolumematerial3}) e (\ref{eq:derivadavolumemateria
 
 \begin{equation}
 	\label{eq:derivadavolumematerial7}	
-	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\left(\dfrac{d^\pi \mathcal{G}}{\partial t}+\mathcal{G}\nabla_x \cdot \Vl^{\pi}\right)d\Omega_t
+	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\left(\dfrac{\partial^\pi \mathcal{G}}{\partial t}+\mathcal{G}\nabla_x \cdot \Vl^{\pi}\right)d\Omega_t
 \end{equation}
 
 ou, equivalentemente:
 
 \begin{equation}
 	\label{eq:derivadavolumematerial8}	
-	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\left(\dfrac{d^\pi \mathcal{G}}{\partial t}+\nabla_x \cdot (\mathcal{G}\Vl^{\pi})\right)d\Omega_t
+	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\left(\dfrac{\partial^\pi \mathcal{G}}{\partial t}+\nabla_x \cdot (\mathcal{G}\Vl^{\pi})\right)d\Omega_t
 \end{equation}
 
 Usando o teorema da divergência finalmente tem-se a expressão alternativa:
 
 \begin{equation}
 	\label{eq:derivadavolumematerial9}	
-	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\dfrac{d^\pi \mathcal{G}}{\partial t}d\Omega_t+\int_{\partial \Omega_t} \mathcal{G}\Vl^{\pi} \cdot \nl da
+	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\dfrac{\partial^\pi \mathcal{G}}{\partial t}d\Omega_t+\int_{\partial \Omega_t} \mathcal{G}\Vl^{\pi} \cdot \nl da
 \end{equation}
-
 em que $\partial \Omega t$ é a borda do volume $\Omega_t$ enquanto que $\nl$ é o vetor normal que aponta para fora da superfície $da$.
 
 \subsection{Taxa de deformação}\index{Sectioning!Subsections}
 
-A derivada material permite a descrição Euleriana da cinemática da deformação que se refere apenas a configuração atual. A taxa do tensor de deformações Euleriana é definida pela relação:
+A derivada material permite a descrição Euleriana da cinemática da deformação que se refere apenas a configuração atual. A taxa Euleriana do tensor de deformações é definida pela relação:
 
 \begin{equation}
 	\label{eq:taxadedeformacaoeuleriana1}	
 	\dfrac{d^\pi}{dt}(d\xl \cdot d\yl) = 2d\xl \cdot \dl^{\pi} \cdot d\yl
 \end{equation}
-
 em que $d\xl$ e $d\yl$ são quaisquer vetores materiais do esqueleto ($\pi = s$) ou do fluído ($\pi = f$). Usando de (\ref{eq:dpix3}) em (\ref{eq:taxadedeformacaoeuleriana1}) tem-se: 
 
 \begin{equation}
 	\label{eq:taxadedeformacaoeuleriana2}	
-\dl^{\pi} = \dfrac{1}{2}(\nabla_x \Vl^{\pi} + ^{t}\nabla_x \Vl^{\pi}); ~~ d^\pi_{ij} =  \dfrac{1}{2} \left(\dfrac{\partial V_i}{\partial x_j} + \dfrac{\partial V_j}{\partial x_i}\right)
+\dl^{\pi} = \dfrac{1}{2}(\nabla_x \Vl^{\pi} + ^{t}\nabla_x \Vl^{\pi}); ~~ d^\pi_{ij} =  \dfrac{1}{2} \left(\dfrac{\partial V_i^\pi}{\partial x_j} + \dfrac{\partial V_j^\pi}{\partial x_i}\right)
 \end{equation}
 
 A definição (\ref{eq:taxadedeformacaoeuleriana2}) de $\dl^{\pi}$ nos permite decompor a deformação cinemática do vator material $d\xl$ na forma:
 
 \begin{equation}
 	\label{eq:taxadedeformacaoeuleriana3}	
-	\dfrac{d^\pi}{dt}(d\xl) = \Omegall^\pi \cdot d\xl + \dl^\pi \cdot d\xl; ~~~ \Omega^\pi_{ij} = \dfrac{1}{2}\left(\dfrac{\partial V_i^\pi}{\partial x_j}-\dfrac{\partial V_j^\pi}{\partial x_i} \right)
+	\dfrac{d^\pi}{dt}(d\xl) = \Omegall^\pi \cdot d\xl + \dl^\pi \cdot d\xl
 \end{equation}
-
 onde o $\Omegall^\pi$ é o tensor da taxa de rotação ligada a parte antissimétrica de $\nabla_x \Vl^\pi$:
 
 \begin{equation}
 	\label{eq:taxadedeformacaoeuleriana4}	
-\Omegall^\pi = \dfrac{1}{2}(\nabla_x \Vl^{\pi} - ^{t}\nabla_x \Vl^{\pi}); ~~ \Omega^\pi_{ij} =  \dfrac{1}{2} \left(\dfrac{\partial V_i}{\partial x_j} - \dfrac{\partial V_j}{\partial x_i}\right)
+\Omegall^\pi = \dfrac{1}{2}(\nabla_x \Vl^{\pi} - ^{t}\nabla_x \Vl^{\pi}); ~~~ \Omega^\pi_{ij} = \dfrac{1}{2}\left(\dfrac{\partial V_i^\pi}{\partial x_j}-\dfrac{\partial V_j^\pi}{\partial x_i} \right)
 \end{equation}
 
 O termo $\Omegall^\pi \cdot d\xl$ em (\ref{eq:taxadedeformacaoeuleriana3}) não gera taxa de deformação uma vez que leva em conta a rotação infinitesimal do vetor material $d\xl$ conforme:
@@ -683,9 +705,7 @@ O termo $\Omegall^\pi \cdot d\xl$ em (\ref{eq:taxadedeformacaoeuleriana3}) não 
 	\label{eq:taxadedeformacaoeuleriana5}	
 	\Omegall^\pi \cdot d\xl = 2 \omegal^\pi \times d\xl
 \end{equation}
-
 onde $\omegal^\pi$ é o vetor vorticidade:
-
 \begin{equation}
 	\label{eq:vetorvorticidade}	
 	\omegal^\pi = \nabla_x \times \Vl^\pi
@@ -711,13 +731,122 @@ De acordo com (\ref{eq:strainll}) e (\ref{eq:derivadalagrangeanadeltall2}), a ap
 
 \section{Balanço de Massa}\index{Sectioning!Sections}
 
-\subsubsection{Subsubsection Title} \index{Sectioning!Subsubsections}
+\subsection{Equação da Continuidade}\index{Sectioning!Subsections}
 
-Maecenas consectetur metus at tellus finibus condimentum. Proin arcu lectus, ultrices non tincidunt et, tincidunt ut quam. Integer luctus posuere est, non maximus ante dignissim quis. Nunc a cursus erat. Curabitur suscipit nibh in tincidunt sagittis. Nam malesuada vestibulum quam id gravida. Proin ut dapibus velit. Vestibulum eget quam quis ipsum semper convallis. Duis consectetur nibh ac diam dignissim, id condimentum enim dictum. Nam aliquet ligula eu magna pellentesque, nec sagittis leo lobortis. Aenean tincidunt dignissim egestas. Morbi efficitur risus ante, id tincidunt odio pulvinar vitae.
+Sejam $\rho_s$ e $\rho_f$ a densidade mesoscópica ou intrínseca da matriz e do fluído de modo que $\rho_s(1-n)d\Omega_t$ e $\rho_f n d\Omega_t$ são as respectivas massas do esqueleto e do fluído atuais contidas no volume material $d\Omega_t$. Assim a densidade macroscópica ou aparente do esqueleto e do fluído são respectivamente $\rho_s(1-n)$ e $\rho_f n$. Quando não ocorre mudança de massa, nem para o esqueleto e nem para o fluído contido no volume $\Omega_t$, o balanço de massa pode ser escrito na forma:
 
-\paragraph{Paragraph Title}\index{Sectioning!Paragraphs} Nullam mollis tellus lorem, sed congue ipsum euismod a. Donec pulvinar neque sed ligula ornare sodales. Nulla sagittis vel lectus nec laoreet. Nulla volutpat malesuada turpis at ultricies. Ut luctus velit odio, sagittis volutpat erat aliquet vel. Donec ac neque eget neque volutpat mollis. Vestibulum viverra ligula et sapien bibendum, vel vulputate ex euismod. Curabitur nec velit velit. Aliquam vulputate lorem elit, id tempus nisl finibus sit amet. Curabitur ex turpis, consequat at lectus id, imperdiet molestie augue. Curabitur eu eros molestie purus commodo hendrerit. Quisque auctor ipsum nec mauris malesuada, non fringilla nibh viverra. Quisque gravida, metus quis semper pulvinar, dolor nisl suscipit leo, vestibulum volutpat ante justo ultrices diam. Sed id facilisis turpis, et aliquet eros.
+\begin{equation}
+	\label{eq:balanco_de_massa1}	
+	\dfrac{d^s}{dt}\int_{\Omega_t}\rho_s(1-n)d\Omega_t = 0~~~ \text{and}~~~\dfrac{d^f}{dt}\int_{\Omega_t}\rho_fnd\Omega_t = 0 
+\end{equation}
 
-In malesuada ullamcorper urna, sed dapibus diam sollicitudin non. Donec elit odio, accumsan ac nisl a, tempor imperdiet eros. Donec porta tortor eu risus consequat, a pharetra tortor tristique. Morbi sit amet laoreet erat. Morbi et luctus diam, quis porta ipsum. Quisque libero dolor, suscipit id facilisis eget, sodales volutpat dolor. Nullam vulputate interdum aliquam. Mauris id convallis erat, ut vehicula neque. Sed auctor nibh et elit fringilla, nec ultricies dui sollicitudin. Vestibulum vestibulum luctus metus venenatis facilisis. Suspendisse iaculis augue at vehicula ornare. Sed vel eros ut velit fermentum porttitor sed sed massa. Fusce venenatis, metus a rutrum sagittis, enim ex maximus velit, id semper nisi velit eu purus.
+Aplicando (\ref{eq:derivadavolumematerial6}) e (\ref{eq:derivadavolumematerial8}) em (\ref{eq:balanco_de_massa1}) obtemos:
+
+\begin{equation}
+	\label{eq:balanco_de_massa2}	
+	\dfrac{d^s}{dt}(\rho_s(1-n)d\Omega_t) = 0~~~ \text{e}~~~\dfrac{d^f}{dt}(\rho_fnd\Omega_t) = 0 
+\end{equation}
+e as equações de continuidade Euleriana:
+\begin{equation}
+	\label{eq:balanco_de_massa3}	
+	\dfrac{\partial(\rho_s(1-n))}{\partial t} + \nabla_x \cdot (\rho_s(1-n)\Vl^s)=0 ~~~~ \text{e} ~~~~ \dfrac{\partial(\rho_fn)}{\partial t} + \nabla_x \cdot (\rho_fn\Vl^f)=0
+\end{equation}
+
+\subsection{Vetor de fluxo relativo de uma massa fluída. Vetor de Infiltração. Conteúdo de massa fluída}\index{Sectioning!Subsections}
+
+A formulação apropriada das equações constitutivas para o esqueleto que representa os acoplamentos esqueleto-fluído exigirão a referência do movimento do fluído à configuração inicial do esqueleto. Com esse propósito em mente, seja $J_fda$ a massa do fluído entre o tempo $t$ e $t+dt$ através da superfície material do esqueleto infinitesimal $da$ orientada por um vetor normal $n$. Escrevemos: 
+
+\begin{equation}
+	\label{eq:fluxo relativo1}	J_fda = \wl \cdot \nl da
+\end{equation}
+em que $\wl(\xl,t)$ é o vetor Euleriano de fluxo relativo de massa fluída. Uma vez que a quantidade $n(\Vl^f-\Vl^s)\cdot \nl dadt$ é o volume infinitesimal de fluído fluindo através da superfície de esqueleto $da$ durante um tempo infinitesimal $dt$ (ver \autoref{fig:fig1-4.pdf}), o vetor relativo de massa fluída $\wl$ é consistentemente definido por:
+
+\begin{equation}
+	\label{eq:fluxo relativo1}	
+	\wl = \rho_f V; ~~~~ V = n(\Vl^f-\Vl^s)
+\end{equation}
+onde $V$ é o vetor de infiltração. 
+
+\begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
+	\centering % Horizontally center the figure on the page
+	\includegraphics[scale = 1.1]{fig1-4.pdf} % Include the figure image
+	\caption{Gradiente de deformação $\Fll$ e o transporte de um vetor material $d\Xl$}
+	\label{fig:fig1-4.pdf} % Unique label used for referencing the figure in-text
+\end{figure}
+
+Uso da definição (\ref{eq:fluxo relativo1}) nos permite referir ao movimento do balanço de massa do fluído e do esqueleto rearranjando a equação da continuidade (\ref{eq:balanco_de_massa3})$_b$ na forma:
+\begin{equation}
+	\label{eq:fluxo relativo1}	
+	\dfrac{d^s(\rho_fn)}{dt}+\rho_fn\nabla_x \cdot \Vl^s + \nabla_x \cdot \wl = 0 
+\end{equation}
+
+A abordagem Lagrangeana para o balanço de massa fluída pode ser realizada introduzindo o conteúdo de massa fluída Lagrangeana atual $m_f$ por unidade de volume inicial $d\Omega_0$. Esse último refere-se ao conteúdo de massa fluída Euleriana atual $\rho_fn$ por unidade de volume atual $d\Omega_t$ de acordo com:
+
+\begin{equation}
+	\label{eq:fluxo relativo2}	
+	\rho_f n d\Omega_t = m_f d\Omega_0
+\end{equation}
+
+O uso de (\ref{eq:phidOmega0=ndOmegat}) e (\ref{eq:fluxo relativo2}) nos da uma relação útil:
+\begin{equation}
+	\label{eq:fluxo relativo3}	
+	m_f = \rho_f \phi
+\end{equation}
+em que $\phi$ é a porosidade Lagrangeana. Além disso, seja $\Ml(\Xl,t)$ o vetor Lagrangiano anexado a configuração inicial e ligado ao vetor $\wl$ através da relação:
+
+\begin{equation}
+	\label{eq:fluxo relativo3}	
+	\wl \cdot \nl da = \Ml \cdot \Nl dA
+\end{equation}
+onde as superfícies $da$ e $dA$ correspondem na deformação do esqueleto. Assim, fazendo com que $\wl=\vl$ e $\Ml = \Vl$ em (\ref{eq:vnda=VNdA}), Eqs. (\ref{eq:V=JF-1}) e (\ref{eq:nablaxvdOmegat=nablaXVdOmega0}) provem a seguinte fórmula de transporte:
+
+\begin{equation}
+	\label{eq:fluxo relativo4}	
+	\Ml = J\Fll^{-1} \cdot \wl;~~~~ \nabla_x \cdot \wl d\Omega_t = \nabla_X \cdot \Ml d\Omega_0
+\end{equation}
+
+Substituindo (\ref{eq:fluxo relativo2}) e (\ref{eq:fluxo relativo4}) em (\ref{eq:fluxo relativo1}) pré-multiplicando por $d\Omega_t$ e usando de (\ref{eq:derivadavolumematerial3}) com $\pi = s$, obtem-se a equação Lagrangiana da continuidade na forma:
+
+\begin{equation}
+	\label{eq:fluxo relativo5}	
+	\dfrac{dm_f}{dt} + \nabla_X \cdot \Ml = 0; ~~~~ \dfrac{\partial m_f(\Xl,t)}{\partial t} + \dfrac{\partial M_i}{\partial X_i} = 0
+\end{equation}
+
+Analogamente, a abordagem Lagrangiana do balanço de massa do esqueleto vem pela integração de (\ref{eq:balanco_de_massa2})$_a$ na forma:
+
+\begin{equation}
+	\label{eq:fluxo relativo6}	
+	\rho_s(1-n)d\Omega_t = \rho_s^0(1-n_0)d\Omega_0
+\end{equation}
+em que $\rho_s^0 e n_0 = \phi_0$ representam, respectivamente, a denisidade da matriz inicial e a porosidade incial. O uso de (\ref{eq:domegat2}) nos permite escrever:
+\begin{equation}
+	\label{eq:fluxo relativo7}	
+	m_s = m_s^0 = \rho_s^0(1-\phi_0)
+\end{equation}
+onde $m_s = J\rho_s(1-n)$ é o conteúdo de massa por unidade de volume inicial $d\Omega_0$ e permanece constante igual ao seu valor inicial $m_s^0$ representando a densidade do esqueleto $(\rho_s^0(1-\phi_0)$. As equações (\ref{eq:fluxo relativo5}) e (\ref{eq:fluxo relativo7}) constituem as equações Lagrangianas alternativas à  equação da continuidade Euleriana (\ref{eq:balanco_de_massa3}).
+
+\section{Análise Avançada}\index{Sectioning!Sections}
+
+\subsection{Derivada material com uma superfície de descontinuidade}\index{Sectioning!Subsections}
+\subsection{Balanço de massa com uma superfície de descontinuidade. A condição de pulo de Rankine-Hugoniot}\index{Sectioning!Subsections}
+\subsection{Balanço de massa e a rede de dupla porosidade}\index{Sectioning!Subsections}
+
+
+\chapter{Capítulo 2 - Balanço de Momento. Tensor de tensões}\index{Sectioning}
+
+Esse capítulo é dedicado a formulação do balanço de momento para um contínuo poroso visto como uma superposição de dois contínuos em interação mecânica. Tal como na Mecânica do Contínuo padrão, a existência de um tensor de tensão total simétrico e a equação do balanço de momento local em relação ao contínuo poroso visto como um todo podem ser derivados do saldo global do balanço de momento. No entanto, a derivação de equações de balanço de momento separada para o esqueleto e para o fluído não podem ser realizadas a partir de uma abordagem estritamente macroscópica. Um primeiro passo para a equação de momento em falta e um entendimento do balanço de energia mecânica envolvida no teorema da energia cinética consiste em envolver a escala mesoscópica através da introdução de tensões parciais relacionadas com cada contínuo.
+
+\section{Balanço de Momento}\index{Sectioning!Sections}
+
+\newcommand{\fl}{\textbf{f}}
+
+\subsection{A hipótese de forças locais}\index{Sectioning!Subsections}
+
+Na mecânica do contínuo qualquer domínio material $\Omega_t$ está sujeito a dois tipos de forças externas, a força externa de corpo e forças externas de superfície, como desenhado na FIGURA 2.1. Na maioria das aplicações, a força externa de corpo, tal como aquelas devido a gravidade, são as mesmas para o esqueleto e para o fluído. A força de corpo infinitesimal $\delta \fl$
+
+
+
+\newpage
 
 %------------------------------------------------
 

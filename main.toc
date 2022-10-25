@@ -5,52 +5,63 @@
 \contentsline {subsection}{\numberline {1.1.2}Parciculas do Esqueleto e do Fluído. Hipóteses da Continuidade}{11}{subsection.1.1.2}%
 \contentsline {section}{\numberline {1.2}A deformação do esqueleto}{12}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Gradiente de deformação e Fórmula do Transporte}{12}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Porosidades Euleriana e Lagrangeana. Razão de Vazios}{14}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Tensor de Deformações}{15}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Transformações infinitesimais e linearização do tensor de deformações}{16}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Cinemática}{18}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Derivada Material}{18}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Taxa de deformação}{20}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Balanço de Massa}{21}{section.1.4}%
-\contentsline {subsubsection}{\numberline {1.4.0.1}Subsubsection Title}{21}{subsubsection.1.4.0.1}%
-\contentsline {paragraph}{Paragraph Title}{22}{paragraph*.4}%
-\contentsline {chapter}{\numberline {2}In-text Element Examples}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Referencing Publications}{23}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Link Examples}{23}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Lists}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Numbered List}{23}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Bullet Point List}{23}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Descriptions and Definitions}{23}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}International Support}{24}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Ligatures}{24}{section.2.5}%
-\contentsline {part}{\numberline {II}Part Two Title}{25}{part.2}%
-\contentsline {chapter}{\numberline {3}Mathematics}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Theorems}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Several equations}{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Single Line}{27}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Definitions}{27}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Notations}{27}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Remarks}{28}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Corollaries}{28}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Propositions}{28}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Several equations}{28}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Single Line}{28}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3.7}Examples}{28}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Equation Example}{28}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Text Example}{28}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Exercises}{28}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Problems}{29}{section.3.9}%
-\contentsline {section}{\numberline {3.10}Vocabulary}{29}{section.3.10}%
-\contentsline {chapter}{\numberline {4}Presenting Information and Results with a Long Chapter Title}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Table}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Figure}{31}{section.4.2}%
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{33}{chapter*.5}%
-\contentsline {section}{Articles}{33}{chapter*.5}%
-\contentsline {section}{Books}{33}{chapter*.5}%
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{35}{section*.6}%
-\contentsline {chapter}{Appendices}{35}{section*.7}%
-\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{35}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Appendix Section Title}{35}{section.a.A.1}%
-\contentsline {chapter}{\numberline {B}Appendix Chapter Title}{37}{appendix.a.B}%
-\contentsline {section}{\numberline {B.1}Appendix Section Title}{37}{section.a.B.1}%
+\contentsline {paragraph}{Gradiente de deformação e transporte de um vetor}{12}{paragraph*.4}%
+\contentsline {paragraph}{Gradiente de deformações e deslocamento}{13}{paragraph*.5}%
+\contentsline {paragraph}{Trasnporte de volume}{14}{paragraph*.6}%
+\contentsline {paragraph}{Trasnporte de superfície}{14}{paragraph*.7}%
+\contentsline {subsection}{\numberline {1.2.2}Porosidades Euleriana e Lagrangeana. Razão de Vazios}{15}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Tensor de Deformações}{16}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Transformações infinitesimais e linearização do tensor de deformações}{17}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Cinemática}{19}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Derivada Material}{19}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Taxa de deformação}{21}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Balanço de Massa}{22}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Equação da Continuidade}{22}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Vetor de fluxo relativo de uma massa fluída. Vetor de Infiltração. Conteúdo de massa fluída}{23}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Análise Avançada}{24}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Derivada material com uma superfície de descontinuidade}{24}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Balanço de massa com uma superfície de descontinuidade. A condição de pulo de Rankine-Hugoniot}{24}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Balanço de massa e a rede de dupla porosidade}{24}{subsection.1.5.3}%
+\contentsline {chapter}{\numberline {2}Capítulo 2 - Balanço de Momento. Tensor de tensões}{25}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Balanço de Momento}{25}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}A hipótese de forças locais}{25}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}In-text Element Examples}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Referencing Publications}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Link Examples}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Lists}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Numbered List}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Bullet Point List}{27}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Descriptions and Definitions}{27}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}International Support}{28}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ligatures}{28}{section.3.5}%
+\contentsline {part}{\numberline {II}Part Two Title}{29}{part.2}%
+\contentsline {chapter}{\numberline {4}Mathematics}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Theorems}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Several equations}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Single Line}{31}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Definitions}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Notations}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Remarks}{32}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Corollaries}{32}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Propositions}{32}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Several equations}{32}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Single Line}{32}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Examples}{32}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Equation Example}{32}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Text Example}{32}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Exercises}{32}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Problems}{33}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Vocabulary}{33}{section.4.10}%
+\contentsline {chapter}{\numberline {5}Presenting Information and Results with a Long Chapter Title}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Table}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Figure}{35}{section.5.2}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{37}{chapter*.8}%
+\contentsline {section}{Articles}{37}{chapter*.8}%
+\contentsline {section}{Books}{37}{chapter*.8}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{39}{section*.9}%
+\contentsline {chapter}{Appendices}{39}{section*.10}%
+\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{39}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Appendix Section Title}{39}{section.a.A.1}%
+\contentsline {chapter}{\numberline {B}Appendix Chapter Title}{41}{appendix.a.B}%
+\contentsline {section}{\numberline {B.1}Appendix Section Title}{41}{section.a.B.1}%
 \contentsfinish 

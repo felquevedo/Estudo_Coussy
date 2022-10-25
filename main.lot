@@ -2,8 +2,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Table caption.}}{31}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Floating table.}}{32}{table.4.2}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Table caption.}}{35}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Floating table.}}{36}{table.5.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

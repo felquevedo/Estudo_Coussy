@@ -131,7 +131,7 @@
 
 \chapter{Capítulo 1 - Deformação e Cinemática. Balanço de massa}\index{Sectioning}
 
-O objetivo deste capítulo é descrever a deformação e a cinemática de um meio poroso formado por um esqueleto deformável e um fluído saturando o espaço poroso. A ideia subjacente consiste em abordar o meio poroso como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. A descrição da deformação e da cinemática de cada contínuo em separado não difere forma de alguma daquela de um meio contínuo monofásico. Mesmo assim, a deformação do esqueleto \footnote{N.T: como será visto, o \textbf{esqueleto} é o espaço ocupado pela matriz e os vazios conectados. Sendo a \textbf{matriz} o espaço ocupado pelo sólido com sua porosidade oclusa.} é a única que eventualmente pode ser realmente observada e portanto é a discutida na sequência.
+O objetivo deste capítulo é descrever a deformação e a cinemática de um meio poroso formado por um esqueleto\footnote{N.T: como será visto, o \textbf{esqueleto} é o espaço ocupado pela matriz e os vazios conectados. Sendo a \textbf{matriz} o espaço ocupado pelo sólido com sua porosidade oclusa.} deformável e um fluído saturando o espaço poroso. A ideia subjacente consiste em abordar o meio poroso como a sobreposição de dois contínuos, o esqueleto contínuo e o fluído contínuo. A descrição da deformação e da cinemática de cada contínuo em separado não difere forma de alguma daquela de um meio contínuo monofásico. Mesmo assim, a deformação do esqueleto é a única que eventualmente pode ser realmente observada e portanto é a discutida na sequência.
 
 As leis da física que governam a evolução de um contínuo poroso envolve a taxa temporal das quantidades físicas ligadas ao esqueleto ou ao fluído, qualquer que sejam seus movimentos distintos posterior. Por conseguinte a derivada particular é portanto introduzida, permitindo a nós seguir separadamente o movimento do esqueleto e do fluído. Uma primeira ilustração do seu uso é dada no final desse capítulo expressando o balanço de massa para os dois contínuos sobrepostos.
 
@@ -161,7 +161,7 @@ Quando sujeito a forças externas e a variações de pressão do fluído saturad
 
 
 
-\subsection{Gradiente de deformação e Fórmula do Transporte}\index{Sectioning!Subsections}
+\subsection{Gradiente de deformação e Fórmulas de Transporte}\index{Sectioning!Subsections}
 
 
 \newcommand{\Fll}{\textbf{F}}
@@ -197,7 +197,7 @@ No tempo $t=0$ considere uma configuração inicial para o esqueleto. Nesta conf
 		\Xl = X_i \el_i; ~~ \xl = x_i(X_j,t)\el_i 
 \end{equation} 
 com um somatório no índice repetido $i$ \footnote{Conhecido também como convenção de somatórios de Einstein: $\Xl = X_1 \el_1 + X_2 \el_2 + X_3 \el_3$.}. No restante do trabalho essa convenção é adotada, desde que nenhuma outra indicação seja dada e a notação indicial se refere a um sistema de coordenadas Cartesiano.
-
+\\
 \paragraph{Gradiente de deformação e transporte de um vetor}\index{Sectioning!Paragraphs} Na configuração inicial considere um vetor material infinitesimal $d\Xl$ da partícula de esqueleto localizada a $\Xl$ orientado para a partícula justaposta localizada a $\Xl+d\Xl$. Após a deformação, $d\Xl$ se torna $d\xl$ e acompanha as mesmas partículas de esqueleto em suas novas posições, $\xl$ e $\xl+d\xl$ (ver \autoref{fig:fig1-2.pdf}). 
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
@@ -224,7 +224,7 @@ onde:
 	\Fll = \nabla_X \xl ; ~~ F_{ij} = \dfrac{\partial x_i}{\partial X_j}
 \end{equation}
 
-Em (\ref{eq:Fll}) $\nabla_X$ representa o operador gradiente (nabla) relativo a configuração inicial. $\Fll$ é chamado de \textbf{gradiente de deformações}. Ele transporta qualquer vetor material $d\Xl$ em seu deformado $d\xl$. Sua inversa $\Fll^{-1}$ e sua transposta ${}^t \Fll$ são respectivamente definidos por:
+Em (\ref{eq:Fll}) $\nabla_X$ representa o operador gradiente (nabla) relativo a configuração inicial\footnote{N.T.: Note pela ordem de $\Fll$ que o gradiente de um vetor é uma matriz.}. $\Fll$ é chamado de \textbf{gradiente de deformações}. Ele transporta qualquer vetor material $d\Xl$ em seu deformado $d\xl$. Sua inversa $\Fll^{-1}$ e sua transposta ${}^t \Fll$ são respectivamente definidos por:
 
 \begin{equation}
 	\label{eq:inversaFll_e_transpostaFll}	
@@ -285,7 +285,7 @@ Como consequência qualquer volume material inicial $d\Omega_0$ se transforma no
 \end{equation}
 onde $J=det{\Fll}$ é o Jacobiano da deformação.
 
-\paragraph{Trasnporte de superfície}\index{Sectioning!Paragraphs} Considere uma superficie material $dA$, orientada pelo vetor unitário normal $\Nl$. Ao longo da deformação $dA$ se transforma na superfície material $da$, orientada pelo vetor normal $\nl$. Como os vetores $\Nl$ e $\nl$ não são vetores materiais, eles não sofrem deformação. Seja $\Ul$ qualquer vetor material na configuração inicial. O cilindro material de volume inicial $\Nl \cdot \Ul dA$ se transforma no cilindro material de volume $\nl \cdot \Fll \cdot \Ul da$ (ver \autoref{fig:fig1-3.pdf}). 
+\paragraph{Trasnporte de superfície}\index{Sectioning!Paragraphs} Considere uma superficie material $dA$, orientada pelo vetor unitário normal $\Nl$. Ao longo da deformação, $dA$ se transforma na superfície material $da$, orientada pelo vetor normal $\nl$. Como os vetores $\Nl$ e $\nl$ não são vetores materiais, eles não sofrem deformação. Seja $\Ul$ qualquer vetor material na configuração inicial. O cilindro material de volume inicial $\Nl \cdot \Ul dA$ se transforma no cilindro material de volume $\nl \cdot \Fll \cdot \Ul da$ (ver \autoref{fig:fig1-3.pdf}). 
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
@@ -433,7 +433,7 @@ N.T.: Nessa dedução é utilizado as seguintes propriedades dos tensores de seg
 	~~~~ = \dfrac{1}{2}({}^t\Rll \cdot {}^t\Dll \cdot \Dll \cdot \Rll - \onell)
 \end{displaymath}
 \begin{displaymath}	
-	~~~~ = \dfrac{1}{2}(\Dll \cdot \Rll^t \cdot {}^t\Rll \cdot \Dll - \onell)
+	~~~~ = \dfrac{1}{2}(\Dll \cdot ^{t}\Rll \cdot {}^t\Rll \cdot \Dll - \onell)
 \end{displaymath}
 \begin{displaymath}	
 	~~~~ = \dfrac{1}{2}(\Dll \cdot \onell \cdot \Dll - \onell)
@@ -567,7 +567,7 @@ Em contraste a abordagem Lagrangeana, a abordagem Euleriana envolve apenas a con
 
 \subsection{Derivada Material}\index{Sectioning!Subsections}
 \textbf{Definição}
-A derivada material $d^\pi \mathcal{G}/dt$ com relação a partícula $\pi$ ($=s$ ou $f$) de algum campo $\mathcal{G}$ é a derivada temporal de $G$ que um observador ligado a partícula derivaria. Este observador registra a variação $d^\pi\mathcal{G}$ da quantidade $\mathcal{G}$ entre os tempos $t$ e $t+dt$. Por exemplo, sendo a origem de coordenadas fixa, o campo de velocidades $\Vl^\pi(\xl,t)$ da partícula $\pi$ localizada a $\xl$ se lê:
+A derivada material $d^\pi \mathcal{G}/dt$ com relação a partícula $\pi$ ($=s$ ou $f$) de algum campo $\mathcal{G}$ é a derivada temporal de $G$ que um observador ligado a partícula derivaria. Este observador registra a variação $d^\pi\mathcal{G}$ da quantidade $\mathcal{G}$ entre os tempos $t$ e $t+dt$. Por exemplo, sendo a origem de coordenadas fixa, o campo de velocidades $\Vl^\pi(\xl,t)$ da partícula $\pi$ localizada a $\xl$ se lê \footnote{N.T.: aqui se define um campo vetorial de velocidades que depende da posição atual da partícula e do tempo}:
 
 \begin{equation}
 	\label{eq:dpix1}	
@@ -582,7 +582,7 @@ A definição (\ref{eq:dpix1}) nos permite escrever a derivada material de um ve
 	\dfrac{d^\pi}{dt}(d\xl) = \dfrac{d^\pi}{dt}[(\xl+d\xl)-\xl]=\Vl^\pi(\xl+d\xl,t)- \Vl^\pi(\xl,t) 
 \end{equation}
 
-de modo que:
+de modo que \footnote{N.T.: o gradiente da velocidade contraído com o vetor $d\xl$ indica que $d\xl$ vai variar conforme a velocidade está variando em cada direção na configuração atual.}:
 
 \begin{equation}
 	\label{eq:dpix3}	
@@ -618,7 +618,7 @@ O produto $(\vl_1,\vl_2,\vl_3)$ é zero assim que dois vetores entre os vetores 
 	\label{eq:derivadavolumematerial3}	
 	\dfrac{d^\pi}{dt}(d\Omega_t) = \left(\dfrac{\partial V_1^\pi}{\partial x_1},\dfrac{\partial V_2^\pi}{\partial x_2},\dfrac{\partial V_3^\pi}{\partial x_3}\right)(d\xl_1,d\xl_2,d\xl_3)
 \end{equation}
-ou equivalentemente:
+ou equivalentemente \footnote{N.T.: a variação do volume no tempo acaba sendo o divergente da velocidade. Se os pontos no entorno estiverem se afastando no tempo, o volume estará aumentando. Se os pontos estiverem se aproximando, o volume estará diminuindo.}:
 \begin{equation}
 	\label{eq:derivadavolumematerial3}	
 	\dfrac{d^\pi}{dt}(d\Omega_t) = (\nabla_x \cdot \Vl^\pi)d\Omega_t; ~~~ \pi = s ~~\text{ou} ~~ f
@@ -626,7 +626,7 @@ ou equivalentemente:
 
 \textbf{Derivada material de um campo}
 
-A derivada material $d^\pi \mathcal{G}/dt$ com respeito a partícula $\pi (=s~~\text{ou}~~f)$ do campo $\mathcal{G}(\xl, t)$ vem a ser a derivada de tempo de $\mathcal{G}$ ao deixar $\xl$ coincidir com as sucessivas posições $\xl^{\pi}(t)$ ocupadas pela partícula. Nós escrevemos:
+A derivada material $d^\pi \mathcal{G}/dt$ com respeito a partícula $\pi (=s~~\text{ou}~~f)$ do campo $\mathcal{G}(\xl, t)$ vem a ser a derivada de tempo de $\mathcal{G}$ ao deixar $\xl$ coincidir com as sucessivas posições $\xl^{\pi}(t)$ ocupadas pela partícula. Nós escrevemos \footnote{N.T.: a partícula notará a variação do campo no tempo adicionada a variação espacial desse campo devido ao seu deslocamento.}:
 
 \begin{equation}
 	\label{eq:derivadavolumematerial4}	
@@ -663,7 +663,7 @@ ou, equivalentemente:
 	\dfrac{d^\pi}{dt}\int_{\Omega_t}\mathcal{G}d\Omega_t = \int_{\Omega_t}\left(\dfrac{\partial^\pi \mathcal{G}}{\partial t}+\nabla_x \cdot (\mathcal{G}\Vl^{\pi})\right)d\Omega_t
 \end{equation}
 
-Usando o teorema da divergência finalmente tem-se a expressão alternativa:
+Usando o teorema da divergência finalmente tem-se a expressão alternativa \footnote{Essa derivada indica que a variação do campo no volume é a variação desse campo no tempo mais o que sai ou entra ao longo da superfície do domínio.}:
 
 \begin{equation}
 	\label{eq:derivadavolumematerial9}	
@@ -733,7 +733,7 @@ De acordo com (\ref{eq:strainll}) e (\ref{eq:derivadalagrangeanadeltall2}), a ap
 
 \subsection{Equação da Continuidade}\index{Sectioning!Subsections}
 
-Sejam $\rho_s$ e $\rho_f$ a densidade mesoscópica ou intrínseca da matriz e do fluído de modo que $\rho_s(1-n)d\Omega_t$ e $\rho_f n d\Omega_t$ são as respectivas massas do esqueleto e do fluído atuais contidas no volume material $d\Omega_t$. Assim a densidade macroscópica ou aparente do esqueleto e do fluído são respectivamente $\rho_s(1-n)$ e $\rho_f n$. Quando não ocorre mudança de massa, nem para o esqueleto e nem para o fluído contido no volume $\Omega_t$, o balanço de massa pode ser escrito na forma:
+Sejam $\rho_s$ e $\rho_f$ a densidade mesoscópica ou intrínseca da matriz e do fluído de modo que $\rho_s(1-n)d\Omega_t$ e $\rho_f n d\Omega_t$ são as respectivas massas do esqueleto e do fluído atuais contidas no volume material $d\Omega_t$. Assim a densidade macroscópica ou aparente do esqueleto e do fluído são respectivamente $\rho_s(1-n)$ e $\rho_f n$. Quando não ocorre mudança de massa, nem para o esqueleto e nem para o fluído contido no volume $\Omega_t$, o balanço de massa pode ser escrito na forma \footnote{N.T.: Essa equação indica que durante o tempo não há variação da massa do esqueleto e nem do fluído.}:
 
 \begin{equation}
 	\label{eq:balanco_de_massa1}	

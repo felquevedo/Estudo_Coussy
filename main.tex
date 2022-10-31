@@ -42,6 +42,7 @@
 
 \usepackage{bm}
 \usepackage{array}
+\usepackage{cancel}
 
 % Book information for PDF metadata, remove/comment this block if not required 
 \hypersetup{
@@ -740,13 +741,20 @@ Sejam $\rho_s$ e $\rho_f$ a densidade mesoscópica ou intrínseca da matriz e do
 	\dfrac{d^s}{dt}\int_{\Omega_t}\rho_s(1-n)d\Omega_t = 0~~~ \text{and}~~~\dfrac{d^f}{dt}\int_{\Omega_t}\rho_fnd\Omega_t = 0 
 \end{equation}
 
-Aplicando (\ref{eq:derivadavolumematerial6}) e (\ref{eq:derivadavolumematerial8}) em (\ref{eq:balanco_de_massa1}) obtemos:
+Aplicando (\ref{eq:derivadavolumematerial6}) e (\ref{eq:derivadavolumematerial8}) em (\ref{eq:balanco_de_massa1}) obtemos \footnote{N.T.: Para deduzir apenas aplicar as expressões. Por exemplo, para $\pi=f$ e $\mathcal{G} = \rho_fn$:
+\begin{displaymath}	
+	\dfrac{d^f}{dt}\int_{\Omega_t}^{}\rho_fnd\Omega_t=\int_{\Omega_t}^{}\dfrac{d^f}{dt}(\rho_fnd\Omega_t)=0 \iff \dfrac{d^f}{dt}\rho_fnd\Omega_t = 0
+\end{displaymath}
+\begin{displaymath}	
+	\dfrac{d^f}{dt}\int_{\Omega_t}^{}\rho_fnd\Omega_t=\int_{\Omega_t}^{}\left(\dfrac{\partial (\rho_f n)}{\partial t}+\nabla_x \cdot(\rho_xn\Vl^f) \right)d\Omega_t=0 \iff \dfrac{\partial (\rho_f n)}{\partial t}+\nabla_x \cdot(\rho_xn\Vl^f)
+\end{displaymath}
+}:
 
 \begin{equation}
 	\label{eq:balanco_de_massa2}	
 	\dfrac{d^s}{dt}(\rho_s(1-n)d\Omega_t) = 0~~~ \text{e}~~~\dfrac{d^f}{dt}(\rho_fnd\Omega_t) = 0 
 \end{equation}
-e as equações de continuidade Euleriana:
+e as equações de continuidade Euleriana \footnote{N.T.: Essa expressão indica que o que varia de massa no tempo tem que ser igual ao que diverge.}:
 \begin{equation}
 	\label{eq:balanco_de_massa3}	
 	\dfrac{\partial(\rho_s(1-n))}{\partial t} + \nabla_x \cdot (\rho_s(1-n)\Vl^s)=0 ~~~~ \text{e} ~~~~ \dfrac{\partial(\rho_fn)}{\partial t} + \nabla_x \cdot (\rho_fn\Vl^f)=0
@@ -762,68 +770,95 @@ A formulação apropriada das equações constitutivas para o esqueleto que repr
 em que $\wl(\xl,t)$ é o vetor Euleriano de fluxo relativo de massa fluída. Uma vez que a quantidade $n(\Vl^f-\Vl^s)\cdot \nl dadt$ é o volume infinitesimal de fluído fluindo através da superfície de esqueleto $da$ durante um tempo infinitesimal $dt$ (ver \autoref{fig:fig1-4.pdf}), o vetor relativo de massa fluída $\wl$ é consistentemente definido por:
 
 \begin{equation}
-	\label{eq:fluxo relativo1}	
-	\wl = \rho_f V; ~~~~ V = n(\Vl^f-\Vl^s)
+	\label{eq:fluxo relativo2}	
+	\wl = \rho_f \mathcal{V}; ~~~~ \mathcal{V} = n(\Vl^f-\Vl^s)
 \end{equation}
-onde $V$ é o vetor de infiltração. 
+onde $V$ é o vetor de infiltração \footnote{N.T.: Pode-se notar nas expressões (\ref{eq:fluxo relativo1}) e (\ref{eq:fluxo relativo2}) que se a velocidade do fluído for igual ao do sólido não há entrada ou saída de fluído, ou seja, infiltração ou expulsão de água.}. 
 
 \begin{figure}[H] % Use [H] to suppress floating and place the figure/table exactly where it is specified in the text
 	\centering % Horizontally center the figure on the page
 	\includegraphics[scale = 1.1]{fig1-4.pdf} % Include the figure image
-	\caption{Gradiente de deformação $\Fll$ e o transporte de um vetor material $d\Xl$}
+	\caption{O volume infinitesimal de fluído fluindo através da superfície do esqueleto $da$ durante um tempo infinitesimal $dt$. A porosidade Euleriana $n$ está ainda associada com o volume infinitesimal de fluído $(\Vl^f-\Vl^s)\cdot dadt$, e não com a superfície infinitesimal do esqueleto $da$ o qual o fluído flui.}
 	\label{fig:fig1-4.pdf} % Unique label used for referencing the figure in-text
 \end{figure}
-
-Uso da definição (\ref{eq:fluxo relativo1}) nos permite referir ao movimento do balanço de massa do fluído e do esqueleto rearranjando a equação da continuidade (\ref{eq:balanco_de_massa3})$_b$ na forma:
+Uso da definição (\ref{eq:fluxo relativo2}) nos permite referir ao movimento do balanço de massa do fluído e do esqueleto rearranjando a equação da continuidade (\ref{eq:balanco_de_massa3})$_b$ na forma \footnote{N.T.: Para deduzir a expressão tem-se:
+\begin{displaymath}	
+	\wl = \rho_fn(\Vl^f - \Vl^s) \therefore \Vl^f = \dfrac{\wl}{\rho_fn}+\Vl^s
+\end{displaymath}	
+\begin{displaymath}	
+	\dfrac{\partial(\rho_fn)}{\partial t} + \nabla_x \cdot (\rho_fn\Vl^f)=0 \therefore \dfrac{\partial(\rho_fn)}{\partial t} + \nabla_x \cdot [\rho_fn(\dfrac{\wl}{\rho_fn}+\Vl^s)]=0 \therefore \dfrac{\partial(\rho_fn)}{\partial t}+\rho_fn\nabla_x \cdot \Vl^s + \nabla_x \cdot \wl = 0 
+\end{displaymath}	
+Nessa expressão final, parece que o autor substituiu a derivada parcial pela derivada total em relação ao sólido no primeiro termo. Fica uma dúvida.}:
 \begin{equation}
-	\label{eq:fluxo relativo1}	
+	\label{eq:fluxo relativo3}	
 	\dfrac{d^s(\rho_fn)}{dt}+\rho_fn\nabla_x \cdot \Vl^s + \nabla_x \cdot \wl = 0 
 \end{equation}
 
-A abordagem Lagrangeana para o balanço de massa fluída pode ser realizada introduzindo o conteúdo de massa fluída Lagrangeana atual $m_f$ por unidade de volume inicial $d\Omega_0$. Esse último refere-se ao conteúdo de massa fluída Euleriana atual $\rho_fn$ por unidade de volume atual $d\Omega_t$ de acordo com:
-
+A abordagem Lagrangeana para o balanço de massa fluída pode ser realizada introduzindo o conteúdo de massa fluída Lagrangeana atual $m_f$ por unidade de volume inicial $d\Omega_0$. Esse último refere-se ao conteúdo de massa fluída Euleriana atual $\rho_fn$ por unidade de volume atual $d\Omega_t$ de acordo com \footnote{N.T.: Como o volume é saturado a mesma massa de fluído deve permanecer durante a evolução no tempo.}:
 \begin{equation}
-	\label{eq:fluxo relativo2}	
+	\label{eq:fluxo relativo4}	
 	\rho_f n d\Omega_t = m_f d\Omega_0
 \end{equation}
 
-O uso de (\ref{eq:phidOmega0=ndOmegat}) e (\ref{eq:fluxo relativo2}) nos da uma relação útil:
+O uso de (\ref{eq:phidOmega0=ndOmegat}) e (\ref{eq:fluxo relativo4}) nos da uma relação útil \footnote{N.T.: Tem-se:
+\begin{displaymath}	
+	n = \phi \dfrac{d\Omega_0}{d\Omega_t} \therefore m_fd\Omega_0 = \rho_f n d\Omega_t = \rho_f \phi \dfrac{d\Omega_0}{d\Omega_t}d\Omega_t \therefore m_f = \rho_f \phi
+\end{displaymath}	
+}:
 \begin{equation}
-	\label{eq:fluxo relativo3}	
+	\label{eq:fluxo relativo5}	
 	m_f = \rho_f \phi
 \end{equation}
 em que $\phi$ é a porosidade Lagrangeana. Além disso, seja $\Ml(\Xl,t)$ o vetor Lagrangiano anexado a configuração inicial e ligado ao vetor $\wl$ através da relação:
 
 \begin{equation}
-	\label{eq:fluxo relativo3}	
+	\label{eq:fluxo relativo6}	
 	\wl \cdot \nl da = \Ml \cdot \Nl dA
 \end{equation}
-onde as superfícies $da$ e $dA$ correspondem na deformação do esqueleto. Assim, fazendo com que $\wl=\vl$ e $\Ml = \Vl$ em (\ref{eq:vnda=VNdA}), Eqs. (\ref{eq:V=JF-1}) e (\ref{eq:nablaxvdOmegat=nablaXVdOmega0}) provem a seguinte fórmula de transporte:
+onde as superfícies $da$ e $dA$ correspondem na deformação do esqueleto. Assim, fazendo com que $\wl=\vl$ e $\Ml = \Vl$ em (\ref{eq:vnda=VNdA}), Eqs. (\ref{eq:V=JF-1}) e (\ref{eq:nablaxvdOmegat=nablaXVdOmega0}) fornecem as seguintes fórmulas de transporte:
 
 \begin{equation}
-	\label{eq:fluxo relativo4}	
+	\label{eq:fluxo relativo7}	
 	\Ml = J\Fll^{-1} \cdot \wl;~~~~ \nabla_x \cdot \wl d\Omega_t = \nabla_X \cdot \Ml d\Omega_0
 \end{equation}
 
-Substituindo (\ref{eq:fluxo relativo2}) e (\ref{eq:fluxo relativo4}) em (\ref{eq:fluxo relativo1}) pré-multiplicando por $d\Omega_t$ e usando de (\ref{eq:derivadavolumematerial3}) com $\pi = s$, obtem-se a equação Lagrangiana da continuidade na forma:
+Substituindo (\ref{eq:fluxo relativo4}) e (\ref{eq:fluxo relativo7}) em (\ref{eq:fluxo relativo3}) pré-multiplicando por $d\Omega_t$ e usando de (\ref{eq:derivadavolumematerial3}) com $\pi = s$, obtem-se a equação Lagrangiana da continuidade na forma \footnote{N.T.: Deduzindo:
+\begin{displaymath}	
+	\dfrac{\partial (\rho_fn)}{\partial t}+\rho_fn \nabla_x \cdot \Vl^s + \nabla_x \cdot \wl = 0
+\end{displaymath}
+Multiplica por $d\Omega_t$
+\begin{displaymath}	
+	\dfrac{\partial (\rho_fn)}{\partial t}d\Omega_t+\rho_fn \nabla_x \cdot \Vl^s d\Omega_t + \nabla_x \cdot \wl d\Omega_t = 0
+\end{displaymath}
+Substitui (\ref{eq:fluxo relativo4}) e (\ref{eq:fluxo relativo7}):
+\begin{displaymath}	
+	\dfrac{\partial (\rho_fn)}{\partial t}d\Omega_t+\rho_fn \dfrac{d^s}{d_t}(d\Omega_t) + \nabla_X \cdot \Ml d\Omega_0 = 0
+\end{displaymath}
+\begin{displaymath}	
+	\dfrac{\partial (m_f)}{\partial t}\cancel{d\Omega_0}+\cancel{m_f\dfrac{d\Omega_0}{\cancel{d\Omega_t}} \dfrac{d^s}{d_t}(\cancel{d\Omega_t})} + \nabla_X \cdot \Ml \cancel{d\Omega_0} = 0
+\end{displaymath}
+\begin{displaymath}	
+	\dfrac{\partial (m_f)}{\partial t} + \nabla_X \cdot \Ml = 0
+\end{displaymath}
+
+}:
 
 \begin{equation}
-	\label{eq:fluxo relativo5}	
+	\label{eq:fluxo relativo8}	
 	\dfrac{dm_f}{dt} + \nabla_X \cdot \Ml = 0; ~~~~ \dfrac{\partial m_f(\Xl,t)}{\partial t} + \dfrac{\partial M_i}{\partial X_i} = 0
 \end{equation}
 
-Analogamente, a abordagem Lagrangiana do balanço de massa do esqueleto vem pela integração de (\ref{eq:balanco_de_massa2})$_a$ na forma:
-
+Analogamente, a abordagem Lagrangiana do balanço de massa do esqueleto vem pela integração de (\ref{eq:balanco_de_massa2})$_a$ na forma \footnote{N.T.: a igualdade se verifica a conservação da quantidade de massa da matriz.}:
 \begin{equation}
-	\label{eq:fluxo relativo6}	
+	\label{eq:fluxo relativo9}	
 	\rho_s(1-n)d\Omega_t = \rho_s^0(1-n_0)d\Omega_0
 \end{equation}
-em que $\rho_s^0 e n_0 = \phi_0$ representam, respectivamente, a denisidade da matriz inicial e a porosidade incial. O uso de (\ref{eq:domegat2}) nos permite escrever:
+em que $\rho_s^0$ e $n_0 = \phi_0$ representam, respectivamente, a denisidade da matriz inicial e a porosidade incial. O uso de (\ref{eq:domegat2}) nos permite escrever:
 \begin{equation}
-	\label{eq:fluxo relativo7}	
+	\label{eq:fluxo relativo10}	
 	m_s = m_s^0 = \rho_s^0(1-\phi_0)
 \end{equation}
-onde $m_s = J\rho_s(1-n)$ é o conteúdo de massa por unidade de volume inicial $d\Omega_0$ e permanece constante igual ao seu valor inicial $m_s^0$ representando a densidade do esqueleto $(\rho_s^0(1-\phi_0)$. As equações (\ref{eq:fluxo relativo5}) e (\ref{eq:fluxo relativo7}) constituem as equações Lagrangianas alternativas à  equação da continuidade Euleriana (\ref{eq:balanco_de_massa3}).
+onde $m_s = J\rho_s(1-n)$ é o conteúdo de massa por unidade de volume inicial $d\Omega_0$ e permanece constante igual ao seu valor inicial $m_s^0$ representando a densidade do esqueleto $\rho_s^0(1-\phi_0)$. As equações (\ref{eq:fluxo relativo8}) e (\ref{eq:fluxo relativo10}) constituem as equações Lagrangianas alternativas à  equação da continuidade Euleriana (\ref{eq:balanco_de_massa3}).
 
 \section{Análise Avançada}\index{Sectioning!Sections}
 
